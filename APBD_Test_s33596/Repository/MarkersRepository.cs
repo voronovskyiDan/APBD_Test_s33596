@@ -122,7 +122,7 @@ namespace APBD_Test_s33596.Repository
                     {
                         Id = reader.GetInt32(0),
                         Name = reader.GetString(1),
-                        Description = reader.GetString(2),
+                        Description = reader.IsDBNull(2) ? null : reader.GetString(2),
                         StrickerPrice = reader.GetDecimal(3),
                         ProductType = new TypeResponseDto
                         {

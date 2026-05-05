@@ -9,7 +9,6 @@ namespace APBD_Test_s33596.DTOs.Request
 
         [Required]
         public string Description { get; set; } = string.Empty;
-
         
         [Range(0.01, double.MaxValue, ErrorMessage = "Price must be greater than 0.")]
         public decimal StickerPrice { get; set; }
